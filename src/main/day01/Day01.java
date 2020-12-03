@@ -15,7 +15,6 @@ public class Day01 {
     static long fastestTime = 200000000000000000L;
 
     public static void main(String[] args) throws IOException {
-        long timeBefore = System.nanoTime();
         String fileUrl = Day01.class.getClassLoader().getResource("day01/input.txt").getFile();
         File file = new File(fileUrl);
         Scanner scanner = new Scanner(file);
@@ -48,13 +47,7 @@ public class Day01 {
     }
 
     public static void partTwo() {
-        long timeBefore = System.nanoTime();
         loopThroughPartTwoFastest();
-        long duration = System.nanoTime() - timeBefore;
-        if (duration < fastestTime) {
-            fastestTime = duration;
-        }
-        System.out.println(duration);
 //        System.out.println(Arrays.toString(partTwo));
 //        System.out.println("firstNumber " + partTwo[0] + "\nsecondNumber " + partTwo[1] + "\nthirdNumber " + partTwo[2]);
 //        System.out.println("Total " + (partTwo[0] + partTwo[1] + partTwo[2]));
