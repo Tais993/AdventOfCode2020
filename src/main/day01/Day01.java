@@ -10,14 +10,9 @@ public class Day01 {
     static int[] partTwo = new int[3];
     static ArrayList<Integer> items = new ArrayList<>();
 
-    // * I want the fastest time there is, so I'm kinda cheating by only printing the fastest time.
-
-    static long fastestTime = 200000000000000000L;
-
     public static void main(String[] args) throws IOException {
         String fileUrl = Day01.class.getClassLoader().getResource("day01/input.txt").getFile();
-        File file = new File(fileUrl);
-        Scanner scanner = new Scanner(file);
+        Scanner scanner = new Scanner(new File(fileUrl));
 
         scanner.forEachRemaining(line -> items.add(Integer.parseInt(line)));
 
@@ -25,7 +20,6 @@ public class Day01 {
         for (int i = 0; i < 10000; i++) {
             partTwo();
         }
-        System.out.println(fastestTime);
     }
 
     public static void partOne() {
